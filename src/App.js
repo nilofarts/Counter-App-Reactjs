@@ -10,8 +10,8 @@ function App () {
       Default Value of Counter is {count}
       <div>
         <button className="button" onClick={() => setCount(0)}>Reset Counter</button>
-        <button className="button" onClick={() => setCount(count + 1)}>Increment Counter</button>
-        <button className="button" onClick={() => setCount(count - 1)}>Decrement Counter</button>
+        <button className="button" onClick={() => (count >= 10 ? 0 : setCount(count + 1))}>Increment Counter</button>
+        <button className="button" onClick={() => (count === 0 ? 0 : setCount(count - 1))}>Decrement Counter</button>
       </div>
     </div >
   );
